@@ -1,0 +1,37 @@
+body {
+    background-color: lavender;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#birthday-message {
+    text-align: center;
+}
+
+#candles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.candle {
+    width: 30px;
+    height: 60px;
+    background-color: yellow;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.text-box {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 10;
+}
