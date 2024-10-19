@@ -2,9 +2,9 @@ body {
     background-color: lavender;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100;
+    height: 100vh;
     margin: 0;
 }
 
@@ -12,39 +12,23 @@ body {
     text-align: center;
 }
 
-#candles {
+#cake-image {
+    width: 300px;
+    margin: 20px 0;
+}
+
+#messages {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.candle {
-    width: 30;
-    height: 60;
-    background-color: yellow;
-    border: 1 solid #000;
-    cursor: pointer;
-    position: relative;
-}
-
-.candle::before {
-    content: '';
-    position: absolute;
-    top: -10;
-    left: 50;
- //   transform: translateX(-50%);
-    width: 10;
-    height: 10;
-    background-color: orange;
-    border-radius: 50;
-}
-
-.text-box {
-    display: none;
-    position: absolute;
+.message-box {
     background-color: white;
-    padding: 10;
-    border: 1 solid black;
-    z-index: 10;
+    padding: 10px;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
 }
