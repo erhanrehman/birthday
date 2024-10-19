@@ -25,6 +25,19 @@ body {
     background-color: yellow;
     border: 1px solid #000;
     cursor: pointer;
+    position: relative;
+}
+
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
 }
 
 .text-box {
