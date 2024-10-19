@@ -10,11 +10,28 @@ body {
 
 #birthday-message {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#cake-image {
+#images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between the images */
+    margin-bottom: 20px;
+}
+
+#cake-image, #batoul-image {
     width: 300px;
-    margin: 20px 0;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#description-box {
+    margin-bottom: 20px;
 }
 
 #messages {
