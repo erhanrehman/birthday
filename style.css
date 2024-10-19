@@ -46,6 +46,12 @@ body {
     padding: 10px;
     border: 1px solid black;
     width: 80%;
-    max-width: 400px;
+    max-width: 1000px; /* Increase max-width to accommodate longer text */
     text-align: center;
+    overflow-wrap: break-word; /* Ensures long words break properly */
+    word-wrap: break-word;
+    hyphens: auto; /* Allows text to break more naturally */
+    white-space: pre-wrap; /* Ensures whitespace in text is respected */
+    margin-bottom: 10px; /* Adds spacing between messages */
+    font-size: 14px; /* You can adjust this to fit more text */
 }
