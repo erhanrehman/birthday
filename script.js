@@ -34,6 +34,9 @@ for (let i = 1; i <= 21; i++) {
     
     // When a candle is clicked
     candle.addEventListener('click', function() {
+        // Remove any existing text boxes
+        document.querySelectorAll('.text-box').forEach(box => box.remove());
+
         const textBox = document.createElement('div');
         textBox.classList.add('text-box');
         textBox.innerText = messages[i - 1]; // Use custom message
