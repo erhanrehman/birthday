@@ -1,6 +1,6 @@
-const candlesContainer = document.getElementById('candles');
+const messagesContainer = document.getElementById('messages');
 
-// Custom messages for each candle
+// Custom messages for each box
 const messages = [
     "Message 1",
     "Message 2",
@@ -25,33 +25,10 @@ const messages = [
     "Message 21"
 ];
 
-// Create 21 candles
-for (let i = 1; i <= 21; i++) {
-    const candle = document.createElement('div');
-    candle.classList.add('candle');
-    candle.dataset.index = i;
-    candlesContainer.appendChild(candle);
-    
-    // When a candle is clicked
-    candle.addEventListener('click', function() {
-        // Remove any existing text boxes
-        document.querySelectorAll('.text-box').forEach(box => box.remove());
-
-        const textBox = document.createElement('div');
-        textBox.classList.add('text-box');
-        textBox.innerText = messages[i - 1]; // Use custom message
-        document.body.appendChild(textBox);
-
-        // Position the text box next to the clicked candle
-        const rect = candle.getBoundingClientRect();
-        textBox.style.left = `${rect.left}px`;
-        textBox.style.top = `${rect.bottom + 5}px`;
-        
-        textBox.style.display = 'block';
-
-        // Close the text box when clicked
-        textBox.addEventListener('click', () => {
-            textBox.remove();
-        });
-    });
-}
+// Create 21 message boxes
+messages.forEach(message => {
+    const messageBox = document.createElement('div');
+    messageBox.classList.add('message-box');
+    messageBox.innerText = message;
+    messagesContainer.appendChild(messageBox);
+});
