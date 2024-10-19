@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     messages.forEach(message => {
         const messageBox = document.createElement('div');
         messageBox.classList.add('message-box');
-        messageBox.innerText = message;
+        messageBox.textContent = message;
         messagesContainer.appendChild(messageBox);
     });
 });
